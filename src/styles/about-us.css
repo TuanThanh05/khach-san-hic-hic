@@ -1,0 +1,39 @@
+.box-content {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 24px 32px;
+    background: #fff8f4;
+    border: 2px solid #a11212;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(74, 3, 3, 0.15);
+}
+
+.box-content h3 {
+    margin: 20px 0 10px;
+    padding-left: 12px;
+    font-size: 20px;
+    color: #7a0c0c;
+    border-left: 4px solid #f2c94c;
+}
+
+.box-content h3:first-child {
+    margin-top: 0;
+}
+
+.box-content p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.box-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .box-content {
+        margin: 16px;
+        padding: 16px 18px;
+    }
+}
