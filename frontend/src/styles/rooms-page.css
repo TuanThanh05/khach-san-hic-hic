@@ -1,0 +1,260 @@
+/* ===== Trang quản lý phòng ===== */
+/* Dùng lại biến màu khai báo trong header.css: --red-900, --red-700, --red-600, --gold, --cream */
+
+.rooms-page {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* ---------- Tiêu đề ---------- */
+.rooms-page h1 {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-bottom: 6px;
+  font-size: 28px;
+  color: var(--red-700);
+  border-bottom: 3px solid var(--gold);
+}
+
+/* ---------- Form thêm / sửa ---------- */
+.room-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 28px;
+  padding: 20px 24px;
+  background: #fff8f4;
+  border: 2px solid var(--red-600);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(74, 3, 3, 0.15);
+}
+
+.room-form.editing {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(242, 201, 76, 0.25), 0 4px 14px rgba(74, 3, 3, 0.15);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--red-700);
+}
+
+.room-form input,
+.room-form select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 15px;
+  color: #222;
+  background: #fff;
+  border: 1px solid #e3c6c6;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.room-form input:focus,
+.room-form select:focus {
+  outline: none;
+  border-color: var(--red-600);
+  box-shadow: 0 0 0 3px rgba(161, 18, 18, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Nút ---------- */
+.btn {
+  padding: 10px 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  color: var(--cream);
+  background: linear-gradient(135deg, var(--red-700), var(--red-600));
+}
+
+.btn-primary:hover {
+  background: var(--red-900);
+}
+
+.btn-secondary {
+  color: var(--red-700);
+  background: #f3e3e3;
+}
+
+.btn-secondary:hover {
+  background: #ead0d0;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-edit {
+  color: var(--red-900);
+  background: var(--gold);
+}
+
+.btn-edit:hover {
+  background: #e6b830;
+}
+
+.btn-delete {
+  color: var(--red-600);
+  background: transparent;
+  border: 1px solid var(--red-600);
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background: var(--red-600);
+}
+
+/* ---------- Bảng ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #f0d9d9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 3, 3, 0.12);
+}
+
+.room-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.room-table thead {
+  background: linear-gradient(90deg, var(--red-900), var(--red-700));
+}
+
+.room-table th {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+}
+
+.room-table td {
+  padding: 14px 16px;
+  color: #333;
+  border-bottom: 1px solid #f5e6e6;
+}
+
+.room-table tbody tr {
+  transition: background 0.15s;
+}
+
+.room-table tbody tr:nth-child(even) {
+  background: #fffaf7;
+}
+
+.room-table tbody tr:hover {
+  background: var(--cream);
+}
+
+.room-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.room-name {
+  font-weight: 600;
+  color: var(--red-700);
+}
+
+.room-price-cell {
+  font-weight: 700;
+  color: var(--red-600);
+  white-space: nowrap;
+}
+
+.room-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ---------- Badge loại phòng ---------- */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.badge-standard {
+  color: #555;
+  background: #eee;
+}
+
+.badge-deluxe {
+  color: #7a5a00;
+  background: #fbefc4;
+}
+
+.badge-suite {
+  color: var(--cream);
+  background: var(--red-600);
+}
+
+/* ---------- Trạng thái trống ---------- */
+.empty {
+  padding: 40px 16px;
+  text-align: center;
+  color: #999;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .room-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group:first-child,
+  .form-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .room-form {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .rooms-page h1 {
+    font-size: 22px;
+  }
+}
