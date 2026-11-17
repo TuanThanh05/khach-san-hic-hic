@@ -15,6 +15,8 @@ export default function AboutUs () {
                 <p>Địa chỉ: 123 Đường ABC, Quận A, Thành phố HCM</p>
                 <p>Số điện thoại: +84 123 456 789</p>
                 <p>Email: khachsanvip@gmail.com</p>
+                <h3>Tác giả</h3>
+                <p>N23DCAT065 - Bùi Huỳnh Tuấn Thành</p>
             </div>
         </>
     )
